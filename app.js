@@ -39,10 +39,15 @@ moveHoover() {
   this.directions.forEach(direction=> {
     switch(direction){
       case "N":
-      ((this.position.y <= this.roomDimensions.y) && (this.position.y > 0)
+      (this.position.y <= this.roomDimensions.y) && (this.position.y > 0)
           ? (this.position.y += 1)
-          : this.position.y)
-          break ;
+          : this.position.y
+          break;
+          case "S":
+        (this.position.y <= this.roomDimensions.y)&& (this.position.y > 0)
+          ? (this.position.y -= 1)
+          : this.position.y;
+        break;
     }
   })
 }
