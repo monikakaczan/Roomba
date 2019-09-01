@@ -61,9 +61,6 @@ moveHoover() {
     }
     return this.cleanDirts();
 
-    //collects all the positions (x and y from processing the directions)
-    // this.everyPosition.push({x: Number(`${this.position.x}`), y: Number(`${this.position.y}`)})
-    // let positions = this.everyPosition.slice(-1)
   })
   return this.position
 }
