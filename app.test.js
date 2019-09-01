@@ -10,12 +10,16 @@ describe("Hoover", () => {
     expect(hoover.position).toEqual({ x: 1, y: 2 });
   });
   test("set final position of the hoover after processing the directions", () => {
-    hoover.moveHoover(["N", "N", "E", "S", "E", "E", "S", "W", "N", "W", "W"]);
+    hoover.moveHoover();
     expect(hoover.position).toEqual({ x: 1, y: 3 });
   });
   test("clean all the dirt patches on hoover's way", () => {
-    hoover.moveHoover(["N", "N", "E", "S", "E", "E", "S", "W", "N", "W", "W"]);
+    hoover.moveHoover();
     hoover.cleanDirts()
     expect(hoover.dirtCounter).toEqual(1)
+  })
+  test("move the hoover one grid north", () => {
+    hoover.moveHoover("N")
+    expect(hoover.position).toEqual({ x: 1, y: 3 })
   })
 });
