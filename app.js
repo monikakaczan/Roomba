@@ -59,7 +59,11 @@ moveHoover() {
           : this.position.x;
         break;
     }
+    //collects all the positions (x and y from processing the directions)
+    this.everyPosition.push({x: Number(`${this.position.x}`), y: Number(`${this.position.y}`)})
+    let positions = this.everyPosition.slice(-1)
   })
+  return this.position
 }
 
 
@@ -67,3 +71,5 @@ moveHoover() {
 }
 
 module.exports = Hoover;
+const hoover = new Hoover
+console.log(hoover.moveHoover());
