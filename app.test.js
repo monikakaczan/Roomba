@@ -13,4 +13,9 @@ describe("Hoover", () => {
     hoover.moveHoover(["N", "N", "E", "S", "E", "E", "S", "W", "N", "W", "W"]);
     expect(hoover.position).toEqual({ x: 1, y: 3 });
   });
+  test("clean all the dirt patches on hoover's way", () => {
+    hoover.moveHoover(["N", "N", "E", "S", "E", "E", "S", "W", "N", "W", "W"]);
+    hoover.cleanDirts()
+    expect(hoover.dirtCounter).toEqual(1)
+  })
 });
