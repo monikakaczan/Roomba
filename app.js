@@ -53,6 +53,11 @@ moveHoover() {
           ? (this.position.x += 1)
           : this.position.x;
         break;
+        case "W":
+        (this.position.x != this.roomDimensions.x)  && (this.position.x > 0)
+          ? (this.position.x -= 1)
+          : this.position.x;
+        break;
     }
   })
 }
