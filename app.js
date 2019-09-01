@@ -20,7 +20,6 @@ class Hoover {
 
     this.directions = directions;
     this.dirtCounter = 0;
-    // this.everyPosition = [];
   }
 
   moveHoover() {
