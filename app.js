@@ -48,7 +48,7 @@ class Hoover {
       }
       return this.cleanDirts();
     });
-    return this.position;
+    return `${this.position.x} ${this.position.y}`;
   }
 
   cleanDirts() {
@@ -58,7 +58,7 @@ class Hoover {
         this.dirtPatches.splice(index, 1);
       }
     });
-    return this.dirtCounter;
+    return `${this.dirtCounter}`;
   }
 }
 
