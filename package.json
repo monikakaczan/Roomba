@@ -1,0 +1,22 @@
+{
+  "name": "roomba",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/monikakaczan/Roomba.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/monikakaczan/Roomba/issues"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0"
+  },
+  "homepage": "https://github.com/monikakaczan/Roomba#readme"
+}
