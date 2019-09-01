@@ -49,27 +49,39 @@ moveHoover() {
           : this.position.y;
         break;
         case "E":
-        (this.position.x != this.roomDimensions.x) && (this.position.x > 0)
+        (this.position.x <= this.roomDimensions.x) && (this.position.x > 0)
           ? (this.position.x += 1)
           : this.position.x;
         break;
         case "W":
-        (this.position.x != this.roomDimensions.x)  && (this.position.x > 0)
+        (this.position.x <= this.roomDimensions.x)  && (this.position.x > 0)
           ? (this.position.x -= 1)
           : this.position.x;
         break;
     }
+    return this.cleanDirts();
+
     //collects all the positions (x and y from processing the directions)
-    this.everyPosition.push({x: Number(`${this.position.x}`), y: Number(`${this.position.y}`)})
-    let positions = this.everyPosition.slice(-1)
+    // this.everyPosition.push({x: Number(`${this.position.x}`), y: Number(`${this.position.y}`)})
+    // let positions = this.everyPosition.slice(-1)
   })
   return this.position
 }
 
-
+cleanDirts(){
+  this.dirtPatches.forEach((dirt, index) => {
+    if (dirt.x === this.position.x && dirt.y === this.position.y)
+      {
+        this.dirtCounter +=1
+        this.dirtPatches.splice(index,1)
+      }
+  })
+  return this.dirtCounter
+}
 
 }
 
 module.exports = Hoover;
 const hoover = new Hoover
 console.log(hoover.moveHoover());
+console.log(hoover.cleanDirts());
